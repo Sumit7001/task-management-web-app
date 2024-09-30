@@ -1,0 +1,19 @@
+<form (ngSubmit)="login()" class="needs-validation shadow p-4 bg-light" novalidate style="margin: auto; width: 30%; border-radius: 15px; border: 1px solid #ddd;">
+  <h3 class="text-center mb-4 text-primary">Login</h3>
+  
+  <div class="form-group mb-3">
+    <label for="email" class="form-label">Email</label>
+    <input type="email" name="email" id="email" [(ngModel)]="email" class="form-control" placeholder="Enter your email" required>
+    <div class="invalid-feedback">Please enter a valid email.</div>
+  </div>
+
+  <div class="form-group mb-3">
+    <label for="password" class="form-label">Password</label>
+    <input type="password" name="password" id="password" [(ngModel)]="password" class="form-control" placeholder="Enter your password" required minlength="6">
+    <div class="invalid-feedback">Password must be at least 6 characters long.</div>
+  </div>
+
+  <div class="text-center mt-4">
+    <button type="submit" class="btn btn-primary w-100" style="border-radius: 20px; transition: background-color 0.3s;">Submit</button>
+  </div>
+</form>

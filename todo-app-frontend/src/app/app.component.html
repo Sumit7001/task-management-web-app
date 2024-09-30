@@ -1,0 +1,41 @@
+<div class="app">
+  <header class="app-header">
+    
+      <h1>TASK MANAGER</h1>
+  </header>
+  <!--
+  <nav class="navbar">
+      <ul class="nav-list">
+        <img src="/images/logo.gif" style="height: 50px;border: none;border-radius: 29px;" alt="logo">
+          <li class="nav-item"><a routerLink="/home">Home</a></li>
+
+          <li class="nav-item"><a routerLink="products">Products</a></li>
+          <li class="nav-item"><a routerLink="/register">Register</a></li>
+          <li class="nav-item"><a routerLink="/login">Login</a></li>
+          <li class="nav-item">
+              <a routerLink="/dealers">Dealers List</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/search">Search Product</a>
+        </li>
+            <li class="nav-item">
+              <a routerLink="/aboutus">About Us</a>
+          </li>
+ 
+      </ul>
+  </nav>-->
+  <!--Render navbar component-->
+  <app-navbar></app-navbar>
+  
+  
+  <div class="main-content">
+
+<section class="content-section">
+    <router-outlet></router-outlet>
+</section>
+</div>
+  <footer class='footer'>
+      <p>&copy; All Right Reserved to Wipro Technologies</p>
+    </footer> 
+
+</div>

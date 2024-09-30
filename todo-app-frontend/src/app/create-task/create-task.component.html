@@ -1,0 +1,60 @@
+<form (ngSubmit)="submit()" class="container mt-4 shadow-lg p-5 bg-white rounded" style="max-width: 600px; border-radius: 20px; border: 1px solid #ddd;">
+  <h2 class="text-center text-primary mb-4">Add New Task</h2>
+
+  <div class="form-group mb-3">
+    <label for="title" class="form-label">Title</label>
+    <input
+      type="text"
+      class="form-control"
+      name="title"
+      id="title"
+      [(ngModel)]="task.title"
+      placeholder="Enter task title"
+      required
+    />
+  </div>
+
+  <div class="form-group mb-3">
+    <label for="description" class="form-label">Description</label>
+    <input
+      type="text"
+      class="form-control"
+      name="description"
+      id="description"
+      [(ngModel)]="task.description"
+      placeholder="Enter task description"
+      required
+    />
+  </div>
+
+  <div class="form-group mb-3">
+    <label for="date" class="form-label">Date</label>
+    <input
+      type="date"
+      class="form-control"
+      name="date"
+      id="date"
+      [(ngModel)]="task.date"
+      required
+    />
+  </div>
+
+  <div class="form-group mb-4">
+    <label for="status" class="form-label">Status</label>
+    <select
+      class="form-control"
+      id="status"
+      [(ngModel)]="task.status"
+      name="status"
+      required
+    >
+      <option value="Pending">Pending</option>
+      <option value="In Progress">In Progress</option>
+      <option value="Completed">Completed</option>
+    </select>
+  </div>
+
+  <div class="text-center">
+    <button type="submit" class="btn btn-primary btn-block" style="width: 100%; border-radius: 30px;">Submit</button>
+  </div>
+</form>

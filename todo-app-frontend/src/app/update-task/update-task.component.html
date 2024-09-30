@@ -1,0 +1,69 @@
+<div class="container mt-5 shadow-lg p-5 bg-light rounded" style="max-width: 600px;">
+  <h2 class="text-center text-success mb-4">Edit Task</h2>
+  <form (ngSubmit)="updateTask()">
+    
+    <!-- Title Field -->
+    <div class="form-group mb-3">
+      <label for="title" class="form-label">Title</label>
+      <input 
+        type="text" 
+        class="form-control" 
+        id="title" 
+        [(ngModel)]="task.title" 
+        name="title" 
+        placeholder="Enter task title" 
+        required 
+        readonly
+      />
+    </div>
+
+    <!-- Description Field -->
+    <div class="form-group mb-3">
+      <label for="description" class="form-label">Description</label>
+      <textarea 
+        class="form-control" 
+        id="description" 
+        [(ngModel)]="task.description" 
+        name="description" 
+        rows="4"
+        placeholder="Enter task description" 
+        required
+      ></textarea>
+    </div>
+
+    <!-- Date Field -->
+    <div class="form-group mb-3">
+      <label for="date" class="form-label">Date</label>
+      <input 
+        type="date" 
+        class="form-control" 
+        id="date" 
+        [(ngModel)]="task.date" 
+        name="date" 
+        required
+      />
+    </div>
+
+    <!-- Status Field -->
+    <div class="form-group mb-4">
+      <label for="status" class="form-label">Status</label>
+      <select 
+        class="form-control" 
+        id="status" 
+        [(ngModel)]="task.status" 
+        name="status" 
+        required
+      >
+        <option value="Pending">Pending</option>
+        <option value="In Progress">In Progress</option>
+        <option value="Completed">Completed</option>
+      </select>
+    </div>
+
+    <!-- Submit Button -->
+    <div class="text-center">
+      <button type="submit" class="btn btn-success btn-block" style="width: 100%; border-radius: 30px;">Update Task</button>
+    </div>
+    
+  </form>
+</div>
